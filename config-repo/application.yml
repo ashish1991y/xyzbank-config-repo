@@ -4,3 +4,12 @@ spring:
     username: root
     password: local_database_098
     driver-class-name: com.mysql.cj.jdbc.Driver
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
