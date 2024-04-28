@@ -1,0 +1,6 @@
+user-service:
+  uploadDir: /path/to/upload
+  allowedExtensions:
+    - pdf
+    - jpg
+    - jpeg
