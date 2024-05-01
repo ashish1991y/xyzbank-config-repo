@@ -4,3 +4,27 @@ easy-on-board:
     - pdf
     - jpg
     - jpeg
+
+server:
+  port: 8085
+  servlet:
+    context-path: /eob
+resilience4j:
+  ratelimiter:
+    instances:
+      registerUserFallBack:
+        limitForPeriod: 2
+        limitRefreshPeriod: 1s
+        timeoutDuration: 0
+        registerHealthIndicator: true
+        eventConsumerBufferSize: 100
+      userOverviewFallBack:
+        limitForPeriod: 2
+        limitRefreshPeriod: 1s
+        timeoutDuration: 0
+        registerHealthIndicator: true
+        eventConsumerBufferSize: 100
+
+fallback:
+  default:
+    string: ""
