@@ -1,0 +1,6 @@
+easy-on-board:
+  uploadDir: /path/to/upload
+  allowedExtensions:
+    - pdf
+    - jpg
+    - jpeg
